@@ -1,0 +1,25 @@
+Problem: Simplified University Management System
+
+Design a system to manage students, faculty, and courses at a university. The system should be able to:
+
+Represent different types of people: You should have at least two types of people: Student and Faculty.  Both should have common attributes like name, age, and ID. They should also have unique attributes: Students might have major and GPA, while Faculty might have department and rank (e.g., "Professor", "Associate Professor").  
+You could optionally explore a third type of person, like Parttimer, if you want to experiment with multiple inheritance (a Parttimer member might be both a Faculty member and a student).
+
+Manage courses: Each course has a course_name, course_code, instructor (a Faculty object), and a list of enrolled Student objects.
+
+Track student enrollment: Students can enroll in multiple courses.
+
+Display information: The system should be able to display information about:
+
+All students (name, ID, major, GPA).
+All faculty (name, ID, department, rank).
+All courses (course name, course code, instructor, and list of enrolled students).
+All courses a specific student is enrolled in.
+All students taught by a specific faculty member.
+Add new students, faculty, and courses: The system should allow the university administrator to add new students, faculty, and courses.
+
+Constraints and Considerations:             
+
+Use inheritance to represent the different types of people (Student, Faculty, and optionally Parttimer). Clearly define common and unique attributes.
+Use composition or another appropriate relationship to manage the courses, faculty, and students. A course has a faculty member as its instructor and has students enrolled.
+Focus on good object-oriented design principles. Your classes should be well-defined and have clear responsibilities. Avoid unnecessary coupling between classes.
