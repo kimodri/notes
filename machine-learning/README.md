@@ -1,0 +1,2 @@
+# Machine Learning Projects
+These are my simple machine learning projects—included here are my thoughts while learning. This repo will contain all my notes and projects from different sources. What's cool about this is I can see the progression of my skills.
