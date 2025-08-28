@@ -1,1 +1,2 @@
+# Notes
 This will contain all my notes from all the courses I took towards being a good engineer.
