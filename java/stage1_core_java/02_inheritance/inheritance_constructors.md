@@ -1,7 +1,3 @@
-Absolutely! Here’s a **complete, self-contained guide** about **inheritance when the parent constructor is private**, including explanations, options, and sample code for each case.
-
----
-
 # **Inheritance When Constructor is Private (Java)**
 
 ### **1. The Problem**
@@ -186,13 +182,3 @@ public class ElectricCar extends Vehicle {
 | 1      | protected/public   | ✅ can call `super(...)`    | via constructor                |
 | 2      | private + no-arg   | ✅ automatically called     | via no-arg constructor         |
 | 3      | private            | ❌ cannot call `super(...)` | via setters or factory methods |
-
----
-
-This guide can now serve as a **standalone reference** whenever you encounter private constructors in inheritance.
-
----
-
-If you want, I can **also make a fully working compiled example with Option 3**, so you can copy-paste and run it in Java.
-
-Do you want me to do that?

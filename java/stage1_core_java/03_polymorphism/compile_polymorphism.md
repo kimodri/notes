@@ -100,3 +100,108 @@ if (animalReference instanceof Dog) {
     dogReference.fetch(); // ✅ Now you can call the unique method
 }
 ```
+
+# Interface Polymorphism
+This also works with interfaces, for example you have an interface `Drivable` and you have classes: `ElectricCar`, `GasCar`, `RobotCar`
+
+You can have something like this
+
+```java
+Drivable d = new ElectricCar();
+```
+Why do that, to make it flexible
+
+1. If you use
+
+   ```java
+   ElectricCar myCar = new ElectricCar();
+   ```
+
+   — you’re tied to that *specific class*.
+
+2. But if you use
+
+   ```java
+   Drivable d = new ElectricCar();
+   ```
+
+   — your code only depends on the *ability to drive*, not on what kind of vehicle it is.
+
+That means later, you could easily switch to
+
+```java
+d = new RobotCar();
+```
+
+or
+
+```java
+d = new GasCar();
+```
+
+— without changing anything else, as long as they all implement `Drivable`.
+
+So:
+**Interfaces let you write flexible, modular code that doesn’t care about the exact class — only about what it can do.**
+
+A sample program for it is:
+```java
+Drivable d;
+if (choice.equals("electric")) {
+    d = new ElectricCar();
+} else if (choice.equals("gas")) {
+    d = new GasCar();
+} else {
+    d = new RobotCar();
+}
+d.start(); // works for all of them!
+```
+Perfect 👌 — let’s look at this short example:
+
+```java
+import java.util.ArrayList;
+
+interface Drivable {
+    void start();
+    void stop();
+}
+
+class ElectricCar implements Drivable {
+    public void start() { System.out.println("ElectricCar starting silently..."); }
+    public void stop() { System.out.println("ElectricCar stopping."); }
+}
+
+class GasCar implements Drivable {
+    public void start() { System.out.println("GasCar roaring to life!"); }
+    public void stop() { System.out.println("GasCar shutting down."); }
+}
+
+class RobotCar implements Drivable {
+    public void start() { System.out.println("RobotCar activating systems..."); }
+    public void stop() { System.out.println("RobotCar powering off."); }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        ArrayList<Drivable> vehicles = new ArrayList<>();
+
+        vehicles.add(new ElectricCar());
+        vehicles.add(new GasCar());
+        vehicles.add(new RobotCar());
+
+        for (Drivable v : vehicles) {
+            v.start();
+            v.stop();
+            System.out.println("---");
+        }
+    }
+}
+```
+
+Here’s what’s going on:
+
+* The `ArrayList<Drivable>` can hold *any object* that implements the `Drivable` interface.
+* Even though each object is a different *type*, the loop just calls `start()` and `stop()` — and Java automatically runs the **correct version** for each class.
+
+This is interface-based **polymorphism** in action.
+
