@@ -1,0 +1,27 @@
+[project]
+name = "pytorch"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Kim Audrey Magan", email = "work.kimmagan@gmail.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "numpy>=2.5.2",
+    "pandas>=2.3.2",
+    "torch>=2.13.0",
+    "torchmetrics>=1.8.2",
+]
+
+[project.scripts]
+pytorch = "pytorch:main"
+
+[build-system]
+requires = ["uv_build>=0.12.0,<0.13.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "notebook>=7.6.2",
+]
