@@ -1,0 +1,7 @@
+flowchart LR
+    D[Full dataset] --> TR[Training set]
+    D --> V[Validation set]
+    D --> TE[Test set]
+    TR -->|Update weights and biases| M[Model]
+    V -->|Choose hyperparameters| M
+    M -->|Final evaluation once| TE

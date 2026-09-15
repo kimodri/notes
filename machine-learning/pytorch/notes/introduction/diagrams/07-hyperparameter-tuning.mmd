@@ -1,0 +1,5 @@
+flowchart LR
+    H[Choose learning rate and momentum] --> T[Train a fresh model]
+    T --> V[Check validation results]
+    V -->|Try another setting| H
+    V -->|Choose best model| E[Evaluate test set once]

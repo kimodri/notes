@@ -1,0 +1,7 @@
+flowchart LR
+    I[Original training image] --> R[Rotate]
+    I --> F[Flip]
+    I --> C[Crop or scale]
+    R --> D[More training examples]
+    F --> D
+    C --> D

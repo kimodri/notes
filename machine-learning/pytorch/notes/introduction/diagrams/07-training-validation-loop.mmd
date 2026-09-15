@@ -1,0 +1,7 @@
+flowchart LR
+    T[Training batches] --> F[Forward]
+    F --> L[Loss]
+    L --> B[Backward]
+    B --> U[Update parameters]
+    U --> V[Validation batches]
+    V --> N[Forward only: no gradients]

@@ -1,0 +1,8 @@
+flowchart LR
+    F[Features] -->|Forward pass| M[Model]
+    M --> S[Scores]
+    S --> L[Loss]
+    T[Targets] --> L
+    L -->|Backward pass| G[Gradients]
+    G --> U[Update parameters]
+    U --> M

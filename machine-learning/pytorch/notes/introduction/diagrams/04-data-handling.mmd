@@ -1,0 +1,7 @@
+flowchart LR
+    C[CSV file] --> P[pandas DataFrame]
+    P --> N[NumPy arrays]
+    N --> T[PyTorch tensors]
+    T --> D[TensorDataset]
+    D --> L[DataLoader]
+    L --> B[Batches]
