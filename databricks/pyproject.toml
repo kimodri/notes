@@ -1,0 +1,16 @@
+[project]
+name = "databricks"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Kim Audrey Magan", email = "work.kimmagan@gmail.com" }
+]
+requires-python = ">=3.13"
+dependencies = []
+
+[dependency-groups]
+dev = [
+    "notebook>=7.6.3",
+]
+
